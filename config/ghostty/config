@@ -1,0 +1,56 @@
+# Font
+font-family = FiraCode Nerd Font
+font-size = 10
+
+# Background and Foreground
+background = #000000
+foreground = #C9C1C9
+
+# Color Palette
+palette = 0=#000000
+palette = 1=#804C64
+palette = 2=#8B2950
+palette = 3=#A26B35
+palette = 4=#A66A4F
+palette = 5=#4C1C57
+palette = 6=#7B4D6B
+palette = 7=#281C2B
+palette = 8=#4D5566
+palette = 9=#A66A82
+palette = 10=#A8517A
+palette = 11=#D0895C
+palette = 12=#C88A6F
+palette = 13=#7A4E8A
+palette = 14=#FF7979
+palette = 15=#E8DCE8
+
+# Background Settings
+background-opacity = 1
+background-blur-radius = 0
+
+# Cursor
+cursor-style = block
+cursor-opacity = 0.6
+cursor-color = #FF7979
+
+# Mouse Settings
+mouse-scroll-multiplier = 0.5
+mouse-hide-while-typing = false
+
+# Window Settings (macOS-specific)
+window-decoration = false
+macos-titlebar-style = hidden
+#close_confirmation = false
+
+# Shell Integration
+shell-integration = detect
+
+# Keybindings
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+keybind = ctrl+shift+v=ignore
+keybind = ctrl+shift+s=ignore
+keybind = ctrl+shift+t=ignore
+keybind = alt+shift+p=ignore
+keybind = ctrl+o=ignore
+keybind = cmd+enter=ignore
