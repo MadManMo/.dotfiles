@@ -1,0 +1,13 @@
+@define-color background rgba(0,0,0,0);
+@define-color foreground #dcd7ba;
+@define-color yellow #facc15;
+@define-color purple #c084fc;
+@define-color blue #60a5fa;
+@define-color red #f43f5e;
+@define-color orange #fb923c;
+@define-color gold #eab308;
+@define-color green #a3e635;
+@define-color cyan #22d3ee;
+@define-color selection #2d2d3a;
+@define-color white #ffffff;
+

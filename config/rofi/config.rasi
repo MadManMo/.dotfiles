@@ -1,0 +1,224 @@
+/*****----- Configuration -----*****/
+configuration {
+    /*---------- General settings ----------*/
+    modi:                       "drun,run,filebrowser,window";
+    case-sensitive:             false;
+    cycle:                      true;
+    scroll-method:              0;
+    normalize-match:            true;
+    show-icons:                 true;
+    icon-theme:                 "Dracula";
+    steal-focus:                false;
+
+    /*---------- Matching settings ----------*/
+    matching:                   "normal";
+    tokenize:                   true;
+
+    /*---------- Drun settings ----------*/
+    drun-match-fields:          "name,generic,exec,categories,keywords";
+    drun-display-format:        "{name}";
+    drun-show-actions:          false;
+    drun-url-launcher:          "xdg-open";
+    drun {
+        parse-user:             true;
+        parse-system:           true;
+    }
+
+    /*---------- Run settings ----------*/
+    run-command:                "{cmd}";
+    run-shell-command:          "{terminal} -e {cmd}";
+
+    /*---------- Fallback Icon ----------*/
+    run,drun {
+        fallback-icon:          "application-x-addon";
+    }
+
+    /*---------- Window switcher settings ----------*/
+    window-match-fields:        "title,class,role,name,desktop";
+    window-command:             "wmctrl -i -R {window}";
+    window-format:              "{w} · {c} · {t}";
+
+    /*---------- History and Sorting ----------*/
+    disable-history:            false;
+    sorting-method:             "normal";
+    max-history-size:           25;
+
+    /*---------- Display settings ----------*/
+    display-window:             "Windows";
+    display-run:                "Run";
+    display-drun:               "Apps";
+    display-filebrowser:        "Files";
+
+    /*---------- Misc settings ----------*/
+    terminal:                   "rofi-sensible-terminal";
+    font:                       "FiraCode Nerd Font Mono SemiBold 10";
+    sort:                       false;
+    threads:                    0;
+    click-to-exit:              true;
+
+    /*---------- File browser settings ----------*/
+    filebrowser {
+        directories-first:      true;
+        sorting-method:         "name";
+    }
+
+    /*---------- Other settings ----------*/
+    timeout {
+        action:                 "kb-cancel";
+        delay:                  0;
+    }
+}
+
+/*****----- Global Properties -----*****/
+* {
+    background:                 #000000;
+    background-alt:             rgba(192, 192, 192, 0.5); /* Light gray (#C0C0C0) with 50% opacity */
+    foreground:                 #EDDBC1;
+    selected:                   #2E0307;
+    active:                     #58030C;
+    urgent:                     #ED8DA8;
+}
+
+/*****----- Main Window -----*****/
+window {
+    transparency:               "real";
+    location:                   center;
+    anchor:                     center;
+    fullscreen:                 false;
+    width:                      400px;
+    x-offset:                   0px;
+    y-offset:                   0px;
+    enabled:                    true;
+    border-radius:              20px;
+    cursor:                     "default";
+    background-color:           @background;
+    border:                     2px;
+    border-color:               #c0c0c0;
+}
+
+/*****----- Main Box -----*****/
+mainbox {
+    enabled:                    true;
+    spacing:                    0px;
+    background-color:           transparent;
+    orientation:                vertical;
+    children:                   [ "inputbar", "listbox" ];
+}
+
+listbox {
+    spacing:                    20px;
+    padding:                    20px;
+    background-color:           transparent;
+    orientation:                vertical;
+    children:                   [ "message", "listview" ];
+}
+
+/*****----- Inputbar -----*****/
+inputbar {
+    enabled:                    true;
+    spacing:                    10px;
+    padding:                    90px 70px;
+    background-color:           transparent;
+    background-image:           url("~/.config/rofi/Decay.png", width);
+    text-color:                 @foreground;
+    orientation:                horizontal;
+    children:                   [ "entry" ];
+}
+
+entry {
+    enabled:                    true;
+    expand:                     false;
+    width:                      250px;
+    padding:                    12px 16px;
+    border-radius:              100%;
+    background-color:           @background-alt;
+    text-color:                 @foreground;
+    cursor:                     text;
+    placeholder:                "Search";
+    placeholder-color:          @foreground;
+}
+
+/*****----- Listview -----*****/
+listview {
+    enabled:                    true;
+    columns:                    1;
+    lines:                      7;
+    cycle:                      true;
+    dynamic:                    true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    reverse:                    false;
+    fixed-height:               true;
+    fixed-columns:              true;
+    spacing:                    10px;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    cursor:                     "default";
+}
+
+/*****----- Elements -----*****/
+element {
+    enabled:                    true;
+    spacing:                    10px;
+    padding:                    4px;
+    border-radius:              100%;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    cursor:                     pointer;
+}
+element normal.normal {
+    background-color:           @background;
+    text-color:                 @foreground;
+}
+element normal.urgent {
+    background-color:           @background;
+    text-color:                 @foreground;
+}
+element normal.active {
+    background-color:           @background;
+    text-color:                 @foreground;
+}
+element selected.normal {
+    background-color:           @selected;
+    text-color:                 @foreground;
+}
+element selected.urgent {
+    background-color:           @background;
+    text-color:                 @foreground;
+}
+element selected.active {
+    background-color:           @background;
+    text-color:                 @foreground;
+}
+element-icon {
+    background-color:           transparent;
+    text-color:                 inherit;
+    size:                       32px;
+    cursor:                     inherit;
+}
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+}
+
+/*****----- Message -----*****/
+message {
+    background-color:           transparent;
+}
+textbox {
+    padding:                    12px;
+    border-radius:              100%;
+    background-color:           @background-alt;
+    text-color:                 @foreground;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+}
+error-message {
+    padding:                    12px;
+    border-radius:              20px;
+    background-color:           @background;
+    text-color:                 @foreground;
+}

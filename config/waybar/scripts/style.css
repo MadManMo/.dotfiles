@@ -1,0 +1,83 @@
+/* Global */
+* {
+  border: none;
+  border-radius: 0;
+  font-family: "FiraCode Nerd Font", monospace;
+  font-size: 16px;
+  min-height: 0;
+}
+
+/* Waybar main container */
+window#waybar {
+  background-color: rgba(0, 0, 0, 0);
+  color: #c0c0c0;
+}
+
+/* Center modules */
+#clock {
+  padding: 0 18px;
+}
+
+/* Right-aligned modules */
+#cpu {
+  padding: 0 18px;
+  color: #facc15; /* Yellow */
+  }
+#memory {
+  padding: 0 18px;
+  color: #c084fc; /* Purple */
+  }
+#pulseaudio {
+  padding: 0 18px;
+  color: #60a5fa; /* Blue*/
+  }
+#network {
+  padding: 0 18px;
+  color: #fb923c; /* Orange */
+#bluetooth {
+}
+#tray {
+  padding: 0 18px;
+  background: transparent;
+}
+
+/* Left-aligned custom modules */
+#custom-launcher,
+#custom-code,
+#custom-web,
+#custom-chat,
+#custom-media,
+#custom-updates,
+#custom-swaync,
+#custom-power {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 0 6px;
+  background: transparent;
+}
+
+/* Update module states */
+#custom-updates.updates {
+  color: #e0af68;
+}
+
+#custom-updates.none {
+  color: #60a5fa; /* Blue*/
+}
+
+#custom-updates.updates {
+  color: #f43f5e; /* Red */
+}
+
+/* Notification module */
+#custom-swaync {
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 0 6px;
+  color: #eab308; /* Gold */
+}
+
+/* Tray consistency */
+#tray {
+  margin-right: 6px;
+}
