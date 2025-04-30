@@ -1,0 +1,65 @@
+{
+  "positionX": "right",
+  "positionY": "top",
+  "control-center-positionX": "right",
+  "control-center-positionY": "top",
+  "control-center-margin-top": 0,
+  "spacing": 6,
+  "margin": 8,
+  "padding": 6,
+  "border-radius": 12,
+  "widget-spacing": 4,
+  "control-center-width": 400,
+  "control-center-height": 400,
+  "notification-visibility": {
+    "default": {
+      "state": "visible"
+    }
+  },
+  "timeout": 10,
+  "timeout-low": 5,
+  "timeout-critical": 0,
+  "fit-to-screen": true,
+  "layer": "overlay",
+  "cssPriority": "user",
+  "notification-icon-size": 32,
+  "notification-body-image-height": 100,
+  "notification-body-image-width": 200,
+  "notification-window-width": 400,
+  "widgets": [
+    "title",
+    "dnd",
+    "volume",
+    "media",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Clear All"
+    },
+    "dnd": {
+      "text": "Do Not Disturb"
+    },
+    "volume": {
+      "show-volume-slider": true,
+      "show-icons": true,
+      "label": "Volume"
+    },
+    "notifications": {
+      "show-buttons": true,
+      "grouping": true,
+      "reverse-order": false
+    },
+    "media": {
+      "show-player-icon": true
+    }
+  },
+  "actions": {
+    "notification-center": {
+      "on-click": "toggle",
+      "on-click-right": "close"
+    }
+  }
+}
