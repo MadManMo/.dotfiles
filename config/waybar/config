@@ -1,0 +1,102 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "modules-left": [
+    "custom/launcher",
+    "custom/code",
+    "custom/web",
+    "custom/chat",
+    "custom/media"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "pulseaudio",
+    "custom/notification",
+    "custom/updates",
+    "tray"
+  ],
+
+  "custom/launcher": {
+    "format": "", // or appropriate Nerd Font icon
+    "on-click": "rofi -show drun",
+    "class": "module-bar"
+  },
+  "custom/code": {
+    "format": "󰞷",
+    "on-click": "codium",
+    "class": "module-bar"
+  },
+  "custom/web": {
+    "format": "",
+    "on-click": "firefox",
+    "class": "module-bar"
+  },
+  "custom/chat": {
+    "format": "",
+    "on-click": "vesktop",
+    "class": "module-bar"
+  },
+  "custom/media": {
+    "format": "",
+    "on-click": "spotify",
+    "class": "module-bar"
+  },
+
+  "clock": {
+    "format": "{:%a %b %d, %I:%M %p}"
+  },
+
+  "cpu": {
+    "format": "󰍛 {usage}%"
+  },
+  "memory": {
+    "format": " {used:0.1f}G"
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-icons": {
+      "muted": "󰝟",
+      "low": "",
+      "medium": "",
+      "high": ""
+    },
+    "on-click": "pavucontrol"
+  },
+"custom/updates": {
+    "format": "{} {icon}",
+    "return-type": "json",
+    "format-icons": {
+        "has-updates": "󱍷",
+        "updated": "󰂪"
+    },
+    "exec-if": "which waybar-module-pacman-updates",
+    "exec": "waybar-module-pacman-updates --interval-seconds 5 --network-interval-seconds 300 --no-zero-output"
+},
+"custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": "",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": "",
+        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "inhibited-none": "",
+        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+},
+  "tray": {
+    "spacing": 10
+  }
+
+}
