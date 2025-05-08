@@ -1,0 +1,39 @@
+# MPD connection settings
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_music_dir = "~/Music"
+
+# Interface
+ncmpcpp_directory = "~/.config/ncmpcpp"
+lyrics_directory = "~/.config/ncmpcpp/lyrics"
+visualizer_output_name = "My Audio"
+
+# Display + controls
+playlist_display_mode = "columns"
+browser_display_mode = "columns"
+search_engine_display_mode = "columns"
+discard_colors_if_item_is_selected = "yes"
+enable_window_title = "yes"
+
+# Song format
+song_list_format = "{%a - }{%t}|{%f}"
+now_playing_prefix = "Playing: "
+now_playing_suffix = ""
+song_status_format = "{{%a{ - %t}}|{%f}}"
+statusbar_visibility = "yes"
+header_visibility = "yes"
+titles_visibility = "yes"
+
+# Misc
+autocenter_mode = "yes"
+centered_cursor = "yes"
+mouse_support = "no"
+
+#visualizer_fifo_path = "/tmp/mpd.fifo"
+#visualizer_output_name = "My Audio"
+#visualizer_in_stereo = "yes"
+#visualizer_type = "spectrum"        # or: wave, ellipse
+#visualizer_look = "◆▋"             # customize characters
+#visualizer_color = "blue,cyan,green,magenta,red,yellow"
+
+
