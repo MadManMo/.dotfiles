@@ -1,0 +1,8 @@
+/* Darkrose adjustments */
+.main-root {
+  --background-base: #000000;
+  --background-highlight: #281C2B;
+  --text-base: #C9C1C9;
+  --button-active: #FF7979;
+}
+
